@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Overlock&display=swap');
+
+a.award {
+  font-family: 'Overlock', cursive;
+  color: aliceblue;
+}
+
+.nav-bg {
+  background-color: #6C8EF4;
+}
