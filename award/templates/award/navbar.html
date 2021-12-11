@@ -15,18 +15,28 @@
       </span>
       
       <span class="d-flex justify-content-between">
-        <a class="btn btn-light btn-sm mx-2" href="#">LOGIN</a>
-        <a class="btn btn-outline-light btn-sm" href="#">SUBMIT YOUR SITE</a>
-          <!-- <div class="dropdown show d-inline mt-0 mr-3">
-            <a class="text-secondary instaicon" href="{#{% url 'profile' user.username %}#}" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="fa fa-user-circle fa-lg prof"></i>
+      {% if user.is_authenticated%}
+        <li class="nav-item dropdown list-unstyled">
+            <a class="nav-link dropdown-toggle text-white" id="navbarDropdownMenuLink" data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false">{{ user.username|title }} <img class="rounded-circle nav-img"
+                                                                    src="{{ user.profile.profile_picture.url }}"
+                                                                    alt="">
             </a>
-          
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Profile</a>
-              <a class="dropdown-item" href="#">Logout</a>
+            <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item text-center" href="{% url 'profile' user.username %}">Profile</a>
+                <hr>
+                <a class="dropdown-item text-center" href="{#{% url 'edit' user.username  %}#}"> Edit profile</a>
+                <hr>
+                <a href="{% url 'logout' %}" class="text-secondary text-center dropdown-item">Log Out</a>
+
+
             </div>
-          </div>  -->
+        </li>
+        {% else %}
+        <a class="btn btn-light btn-sm mx-2" href="{% url 'login' %}">LOGIN</a>
+        {% endif %}
+        <a class="btn btn-outline-light" href="#">SUBMIT YOUR SITE</a>
       </span>
         
     </div>
