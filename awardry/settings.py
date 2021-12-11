@@ -13,6 +13,9 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 from decouple import config,Csv
 
 MODE=config("MODE", default="dev")
@@ -74,8 +77,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'award',
+    'rest_framework',
+    'cloudinary',
     'crispy_forms',
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -86,7 +93,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 ROOT_URLCONF = 'awardry.urls'
 
@@ -108,6 +114,12 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'awardry.wsgi.application'
 
+# adding config
+cloudinary.config( 
+  cloud_name = "dss64y5cs", 
+  api_key = "457573822868972", 
+  api_secret = "veBrtH1GvSnlmEe8nvoqxbe85T8" 
+)
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
