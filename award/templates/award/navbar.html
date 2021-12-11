@@ -1,0 +1,33 @@
+{% load crispy_forms_tags %}
+<nav class="navbar fixed-top navbar-expand-lg scrolling-navbar" style="background-color: #054146;" id="nbar">
+    <div class="container">
+      <div class="form-submit">
+        <form class="form-inline" role="search" action="{#{% url 'search' %}#}">
+          {% csrf_token %}
+          <div class="md-form my-0">
+            <input type="text" class="form-control" placeholder="Search" name="search">
+          </div>
+        </form>
+      </div>
+
+      <span>
+        <a class="navbar-brand award" style="color:#ffffff" href="{% url 'index' %}">Awardry</a>
+      </span>
+      
+      <span class="d-flex justify-content-between">
+        <a class="btn btn-light btn-sm mx-2" href="#">LOGIN</a>
+        <a class="btn btn-outline-light btn-sm" href="#">SUBMIT YOUR SITE</a>
+          <!-- <div class="dropdown show d-inline mt-0 mr-3">
+            <a class="text-secondary instaicon" href="{#{% url 'profile' user.username %}#}" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fa fa-user-circle fa-lg prof"></i>
+            </a>
+          
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Profile</a>
+              <a class="dropdown-item" href="#">Logout</a>
+            </div>
+          </div>  -->
+      </span>
+        
+    </div>
+</nav>
