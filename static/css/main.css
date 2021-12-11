@@ -8,3 +8,7 @@ a.award {
 .nav-bg {
   background-color: #6C8EF4;
 }
+
+.form-text, .asteriskField{
+  display:none;
+}
