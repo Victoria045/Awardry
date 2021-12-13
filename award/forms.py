@@ -1,7 +1,7 @@
 from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
-from .models import Profile, Post
+from .models import Profile, Post, Rating
 
 class UserRegisterForm(UserCreationForm):
     email = forms.EmailField(max_length=254, help_text='Required. Enter a valid email address.')
@@ -11,10 +11,9 @@ class UserRegisterForm(UserCreationForm):
         fields = ['username', 'email', 'password1', 'password2']
 
 class PostForm(forms.ModelForm):
-
     class Meta:
         model = Post
-        fields = ('title', 'url', 'description', 'photo', 'technologies',)
+        fields = ('photo','title', 'url', 'description', 'technologies',)
 
 class UpdateUserForm(forms.ModelForm):
     email = forms.EmailField(max_length=254, help_text='Required. Inform a valid email address.')
@@ -28,3 +27,8 @@ class UpdateUserProfileForm(forms.ModelForm):
     class Meta:
         model = Profile
         fields = ['name', 'location', 'profile_picture', 'bio', 'contact']
+
+class RatingsForm(forms.ModelForm):
+    class Meta:
+        model = Rating
+        fields = ['design', 'usability', 'content']
