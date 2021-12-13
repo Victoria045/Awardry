@@ -12,3 +12,148 @@ a.award {
 .form-text, .asteriskField{
   display:none;
 }
+
+.hello{
+  color:green;
+}
+#nbar{
+  background-color:black;
+  color:black;
+}
+.login, #site{
+  text-decoration: none;
+  color:white;
+}
+
+.login:hover, #site:hover{
+  text-decoration: none;
+  color:white;
+}
+.brand{
+  font-weight: bolder;
+}
+.account-img {
+  height: 125px;
+  width: 125px;
+}
+.nav-img{
+  height: 30px;
+  width: 30px;
+}
+
+.form-text, .asteriskField{
+  display:none;
+}
+
+.alert{
+  margin:0;
+  padding:0;
+}
+.alert ul li {
+  list-style-type: none;
+  padding:0;
+  margin:0;
+  font-size:12px;
+}
+.overlay{
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.bg
+{
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin:0px;
+  padding:0px;
+}
+.bg-wrapper{
+  background-color: rgba(0, 0, 0, 0.9);
+
+}
+
+#design{
+  color:white;
+  border: 3px solid orange;
+  border-radius: 50%;
+  height:90px;
+  width:90px;
+  padding-left:20px;
+  padding-top:20px;
+  margin-right:10px;
+  margin-left:70px;
+}
+
+.des{
+  border: 3px solid orange;
+}
+.des1{
+  border: 3px solid brown;
+}
+.des2{
+  border: 3px solid blue;
+}
+.des3{
+  border: 3px solid green;
+}
+/* .site-link{
+  padding-top:-20px;!important
+
+} */
+.pos{
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  height: 80%;
+  width: 80%;
+}
+
+#usable{
+  color:white;
+  border: 3px solid blue;
+  border-radius: 50%;
+  padding-left:20px;
+  padding-top:20px;
+  height:90px;
+  width:90px;
+  margin-right:10px;
+}
+
+#content{
+  color:white;
+  border: 3px solid green;
+  border-radius: 50%;
+  height:90px;
+  width:90px;
+  padding-left:20px;
+  padding-top:20px;
+  margin-right:20px;
+}
+
+#score{
+  color:white;
+  /* border: 3px solid white; */
+  /* border-radius: 50%; */
+  height:90px;
+  width:90px;
+  padding-left:20px;
+  padding-top:20px;
+  margin-right:20px;
+}
+
+.rates{
+  font-size:18px;
+  font-weight:bolder;
+}
+.ting{
+  font-size:14px;
+}
+.display{
+  display: flex;
+  flex-wrap: wrap;
+}
+.container-fluid{
+  padding-right:0px;
+   padding-left:0px;
+} 
