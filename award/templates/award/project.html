@@ -14,19 +14,7 @@
                         <div class="row">
                             <div class="col-md-3"></div>
                             <div class="col-md-6 d-flex flex-row mx-auto" style="margin-top:20%">
-                                {% for rating in post.ratings.all %}
-                                {% if forloop.counter is post.ratings.all.count %}
-                                <div id="design" style="color: black;">{{ rating.design_average}}<br>
-                                    <span class="rates">design</span>
-                                </div>
-                                <div id="usable" style="color: black;" class="mx-auto">{{ rating.usability_average }}<br>
-                                    <span class="rates" style="font-size: 15px;">usability</span>
-                                </div>
-                                <div id="content" style="color: black;">{{ rating.content_average }}<br>
-                                    <span class="rates" style="font-size: 16px;">content</span>
-                                </div>
-                                {% endif %}
-                                {% endfor %}
+                                
                             </div>
                             <div class="col-md-3"></div>
                         </div>
