@@ -100,11 +100,11 @@
 
             <div class="templates display">
                 {% for post in posts %}
-                <div class="col-md-6 mb-4">
-                    <div class="card">
+                <div class="col-md-4 mb-4">
+                    <div class="card" style="width:21.8rem;">
                         <div class="view overlay">
                                 <a href="{% url 'project' post.title %}">
-                                    <img class="card-img-top" style="height:14rem;width: 21.8rem;object-fit:cover;" src="{{ post.photo.url }}"
+                                    <img class="card-img-top" style="height:14rem;width:21.8rem;object-fit:cover;" src="{{ post.photo.url }}"
                                      alt="{{photo.title}}">
                                     <div class="mask rgba-white-slight"></div>
                                 </a>
