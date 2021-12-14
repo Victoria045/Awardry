@@ -16,14 +16,14 @@
                             <div class="col-md-6 d-flex flex-row mx-auto" style="margin-top:20%">
                                 {% for rating in post.ratings.all %}
                                 {% if forloop.counter is post.ratings.all.count %}
-                                <div id="design">{{ rating.design_average}}<br>
+                                <div id="design" style="color: black;">{{ rating.design_average}}<br>
                                     <span class="rates">design</span>
                                 </div>
-                                <div id="usable" class="mx-auto">{{ rating.usability_average }}<br>
-                                    <span class="rates">usability</span>
+                                <div id="usable" style="color: black;" class="mx-auto">{{ rating.usability_average }}<br>
+                                    <span class="rates" style="font-size: 15px;">usability</span>
                                 </div>
-                                <div id="content">{{ rating.content_average }}<br>
-                                    <span class="rates">content</span>
+                                <div id="content" style="color: black;">{{ rating.content_average }}<br>
+                                    <span class="rates" style="font-size: 16px;">content</span>
                                 </div>
                                 {% endif %}
                                 {% endfor %}
@@ -54,7 +54,7 @@
                     <a class="btn btn-info btn-sm" ><h5>{{ rating.score }}</h5>
                         <span class="sc">Average Score</span>
                     </a>
-                    <a class="btn btn-outline-success btn-sm" ><h5>{{ rating.design_average }}</h5>
+                    <a class="btn btn-outline-success btn-sm"><h5>{{ rating.design_average }}</h5>
                         <span class="sc">Design Average</span>
                     </a>
                     <a class="btn btn-outline-primary btn-sm" id="u"><h5>{{ rating.usability_average }}</h5>

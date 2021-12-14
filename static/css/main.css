@@ -97,10 +97,7 @@ a.award {
 .des3{
   border: 3px solid green;
 }
-/* .site-link{
-  padding-top:-20px;!important
 
-} */
 .pos{
   background-position:center;
   background-size:cover;
@@ -133,8 +130,6 @@ a.award {
 
 #score{
   color:white;
-  /* border: 3px solid white; */
-  /* border-radius: 50%; */
   height:90px;
   width:90px;
   padding-left:20px;
