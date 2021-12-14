@@ -2,6 +2,8 @@ from django.urls import path,include
 from . import views
 from django.contrib.auth import views as auth_views
 from rest_framework import routers
+from django.conf import settings
+from django.conf.urls.static import static
 
 router = routers.DefaultRouter()
 router.register('profile', views.ProfileViewSet)
@@ -19,3 +21,5 @@ urlpatterns = [
     path('project/<post>', views.project, name='project'),
     path('search/', views.search_project, name='search'),
 ]
+if settings.DEBUG:
+    urlpatterns+= static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
